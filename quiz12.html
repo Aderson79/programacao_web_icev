@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quiz 12 - Navbar Flexivel</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family:  sans-serif;
+			background: #f4f6f8;
+			color: #1f2937;
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 14px 24px;
+			background: #0f172a;
+			color: #ffffff;
+		}
+
+		.logo {
+			font-size: 1.2rem;
+			font-weight: 700;
+			letter-spacing: 0.4px;
+		}
+
+		.links {
+			display: flex;
+			gap: 18px;
+			list-style: none;
+		}
+
+		.links a {
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: 500;
+			padding: 6px 10px;
+			border-radius: 6px;
+			transition: background-color 0.2s ease;
+		}
+
+		.links a:hover {
+			background: rgba(255, 255, 255, 0.15);
+		}
+
+		.conteudo {
+			max-width: 900px;
+			margin: 36px auto;
+			padding: 0 24px;
+			line-height: 1.6;
+		}
+
+		@media (max-width: 640px) {
+			nav {
+				flex-wrap: wrap;
+			}
+
+			.links {
+				width: 100%;
+				justify-content: flex-end;
+				margin-top: 12px;
+				flex-wrap: wrap;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="logo">ICEV</div>
+		<ul class="links">
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Servicos</a></li>
+			<li><a href="#">Sobre</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+
+	<main class="conteudo">
+		<h1>NAVBAR FLEXÍVEL</h1>
+		<p>Site de exemplo para demonstrar navbar flexivel usando o container <code> nav </code> e <code>display: flex</code>.
+            A extrema esquerda a Logo e a extrema direita os Links, com todos os elementos centralizado verticalmente.
+            No mobile, os links iram quebrar para a linha abaixo com o uso do <code>flex-wrap</code>.
+		</p>
+	</main>
+</body>
+</html>
